@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class teachersActivity extends Activity {
 
-    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

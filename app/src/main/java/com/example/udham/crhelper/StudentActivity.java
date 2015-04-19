@@ -11,22 +11,38 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.parse.ParseUser;
+
 
 public class StudentActivity extends Activity {
 
-    TextView tv;
+    TextView tv,welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+        tv= (TextView) findViewById(R.id.att_text);
+        welcome=(TextView) findViewById(R.id.subTitle);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            // do stuff with the user
+            welcome.setText("Welcome "+currentUser.getUsername());
+        } else {
+
+            // show the signup or login screen
+
+        }
+
+
     }
 
     public void addListenerOnButton() {
 
         final Context context = this;
 
-        tv= (TextView) findViewById(R.id.att_text);
+
 
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
