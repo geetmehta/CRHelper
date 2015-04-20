@@ -59,6 +59,16 @@
             android:name=".sign_up"
             android:label="@string/title_activity_sign_up" >
         </activity>
+        <activity
+            android:name=".studentinfo"
+            android:label="studentinfo">
+            </activity>
+        <activity
+            android:name=".classes"
+            android:label="classes">
+
+            </activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
